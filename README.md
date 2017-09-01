@@ -1,13 +1,16 @@
 # Playlist Deli
+![sammie](https://emojipedia-us.s3.amazonaws.com/thumbs/160/emojidex/112/sandwich_1f96a.png)
+
+Serving fresh playlists.
 
 ## Usage
 
 ###  Obtain credentials
 ```
-bundle install
-ruby server.rb
+$ bundle install
+$ ruby server.rb
 ```
-Sign in to Spotify.
+Sign in to Spotify at http://localhost:4567/.
 
 ### Create sample playlists based on what artists you like
 ```.ruby
