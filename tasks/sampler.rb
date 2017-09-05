@@ -34,7 +34,7 @@ module PlaylistDeli
           count > 1 && !deleted.include?(track.id)
         end
 
-        tracks
+        tracks.shuffle
       end
 
       def recent_artists
