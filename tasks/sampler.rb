@@ -72,7 +72,12 @@ module PlaylistDeli
       def sample_tracks_from_playlists(playlists)
         new_tracks = []
         playlists.each do |artist_id, playlist_array|
-          sorted = playlist_array.sort_by { |x| -x.total }
+          sorted = playlist_array.select { |x| x.total > 10 }
+          if sorted.count > 1
+            sorted = sorted.sort_by { |x| x.total }
+          else
+            sorted = sorted.sort_by { |x| -x.total }
+          end
           next if sorted.first.total == 1
           print '.'
 
